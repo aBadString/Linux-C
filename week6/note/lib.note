@@ -1,0 +1,10 @@
+ar -rc libstaticlib.a aoprand.o base.o
+ar -t libstaticlib.a
+ar -ra aoprand.o libstaticlib.a base.o
+
+gcc main.c -o main -L -lstaticlib
+
+gcc -shared -fPIC -o libdynamic.so aoprand.c base.c
+
+gcc -rdynamic -o dlmain dlmain.c -ldl
+gcc -rdynamic -o dlmain dlmain.c -ldl -I../
