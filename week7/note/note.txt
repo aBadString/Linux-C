@@ -1,0 +1,11 @@
+printf控制台输出是行缓冲; 输出到文件是全缓冲
+
+fork 返回给子进程0; 返回给父进程一个大于0的pid号;
+
+ls /proc/
+ls /proc/1
+ps aux
+ps aux | grep test02_3
+ps aux | grep test02_3 | grep v test02_3
+
+kill -SIGSTOP pid # 修改进程状态
