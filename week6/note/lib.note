@@ -1,10 +1,16 @@
+# 静态库创建
 ar -rc libstaticlib.a aoprand.o base.o
 ar -t libstaticlib.a
 ar -ra aoprand.o libstaticlib.a base.o
+# 静态库链接
+gcc main.c -o main -L. -lstaticlib
+gcc main.c -o main -L../static -lstaticlib -I../static
 
-gcc main.c -o main -L -lstaticlib
-
+# 动态库创建
 gcc -shared -fPIC -o libdynamic.so aoprand.c base.c
-
+# 编译时
+gcc main.c -o dmain libdynamic.so
+gcc main.c -o dmain ../dyamiclib/libdynamic.so -I../dyamiclib/
+# 运行时
 gcc -rdynamic -o dlmain dlmain.c -ldl
-gcc -rdynamic -o dlmain dlmain.c -ldl -I../
+gcc -rdynamic -o dlmain dlmain.c -ldl -I../dyamiclib/
