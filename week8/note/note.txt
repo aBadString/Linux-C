@@ -1,0 +1,19 @@
+ls /proc/
+ls /proc/1
+ps aux
+ps aux | grep test02_3
+ps aux | grep test02_3 | grep v test02_3
+ps aux | grep test | grep -v grep
+
+kill -SIGSTOP pid # 修改进程状态
+
+
+ps -ef
+TTY 终端  watchdog 看门狗
+cat /proc/cpuinfo
+echo $HOME # HOME目录
+echo $PATH # 环境变量
+
+size ./test01.out
+cat /proc/2600/maps
+vsyscall # 系统调用
