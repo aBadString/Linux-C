@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 		id = Menu();
 		switch(id)
 		{
+		case 0:
+			break;
 		case 1:
 			CreateFile();
 			break;
@@ -28,6 +30,11 @@ int main(int argc, char *argv[])
 		case 5:
 			Look();
 			break;
+		case 6:
+			About();
+			break;
+		default:
+			printf("error");
 		}
 		ToContinue();
 	}while(id != 0);
