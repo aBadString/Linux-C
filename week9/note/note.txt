@@ -1,0 +1,17 @@
+cat /proc/sys/kernel/pid_max  # 最大进程数
+
+ldd ./test01.out
+objdump -d ./test01.out
+
+ps -ejH
+execl()  # NULL结束参数列表
+execlp() # p -寻找PATH路径
+execle() # e -添加环境变量参数
+execv()  # v -参数放入数组
+execvp()
+execve()
+
+
+valgrind --track-fds=yes --leak-check=full --undef-value-errors=yes ./test02.out
+
+cat /proc/sys/kernel/sched_child_runs_first
