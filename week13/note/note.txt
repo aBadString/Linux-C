@@ -1,0 +1,2 @@
+kill -l
+ulimit -a
