@@ -1,0 +1,1 @@
+gcc 14-1-1.c -o 14-1-1.out -lpthread
